@@ -4,8 +4,9 @@
 1.获取ticket  
 https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=access_token&type=wx_card
 
-2.获取授权url  
-https://api.weixin.qq.com/card/invoice/getauthurl?access_token=  
+2.获取授权url(这个url用来领取卡券)  
+https://api.weixin.qq.com/card/invoice/getauthurl?access_token=access_token  
+```
 {
     "redirect_url": "",
     "timestamp": "1509507223930",
@@ -16,3 +17,6 @@ https://api.weixin.qq.com/card/invoice/getauthurl?access_token=
     "type": 2,
     "order_id": "20171101104029344764"
 }
+```
+3.回调上传内容到微信，返回mediaId
+4.发送发票到卡包
